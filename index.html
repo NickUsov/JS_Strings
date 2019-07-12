@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Js Strings</title>
+</head>
+<body>
+    <script>
+        
+        // 1. *******************************************
+
+        // let msg = prompt('Enter a string');
+        // function checkChars(msg) {
+        //     let num = 0;
+        //     let symb = 0;
+        //     let other = 0;
+        //     for(let i = 0; i < msg.length; i++) {
+        //         let code = msg.charCodeAt(i);
+        //         if(code > 47 && code < 58) {
+        //             num ++;
+        //         }
+        //         else if((code > 64 && code < 91)||(code > 96 && code < 123)) {
+        //             symb ++;
+        //         }
+        //         else {
+        //             other ++;
+        //         }
+        //     }
+        //     document.write(`String exists: ${num} digits, ${symb} letters, ${other} other symbols`);
+        // }
+        // checkChars(msg);
+
+        // 2. ****************************************************************
+
+        // let num = parseInt(prompt('enter 2-digits number'));
+        // function numToString(num) {
+        //     let first = parseInt(num / 10);
+        //     let second = num % 10;
+        //     let str = '';
+        //     if(num > 9 && num <20) {
+        //         switch(num){
+        //             case 10:{return 'ten'}break;
+        //             case 11:{return 'eleven'}break;
+        //             case 12:{return 'twelve'}break;
+        //             case 13:{return 'thirteen'}break;
+        //             case 14:{return 'fourteen'}break;
+        //             case 15:{return 'fiveteen'}break;
+        //             case 16:{return 'sixteen'}break;
+        //             case 17:{return 'seventeen'}break;
+        //             case 18:{return 'eighteen'}break;
+        //             case 19:{return 'nineteen'}break;
+        //         }
+        //     }
+        //     switch(first){
+        //         case 2:{str = 'twenty '}break;
+        //         case 3:{str = 'thirty '}break;
+        //         case 4:{str = 'fourty '}break;
+        //         case 5:{str = 'fivety '}break;
+        //         case 6:{str = 'sixty '}break;
+        //         case 7:{str = 'seventy '}break;
+        //         case 8:{str = 'eighty '}break;
+        //         case 9:{str = 'ninety '}break;
+        //     }
+        //     switch(second){
+        //         case 0:{return str}break;
+        //         case 1:{str += 'one'}break;
+        //         case 2:{str += 'two'}break;
+        //         case 3:{str += 'three'}break;
+        //         case 4:{str += 'four'}break;
+        //         case 5:{str += 'five'}break;
+        //         case 6:{str += 'six'}break;
+        //         case 7:{str += 'seven'}break;
+        //         case 8:{str += 'eight'}break;
+        //         case 9:{str += 'nine'}break;
+        //     }
+        //     return str;
+        // }
+        // document.write(numToString(num));
+
+        // 3. *************************************************************************
+
+        // let msg = prompt('Enter a string');
+        // function changeChars(msg) {
+        //     let str='';
+        //     for(let i = 0; i < msg.length; i++) {
+        //         let code = msg.charCodeAt(i);
+        //         if(code > 47 && code < 58) {
+        //             str += '_';
+        //         }
+        //         else if(code > 64 && code < 91) {
+        //             str += msg[i].toLowerCase()
+        //         }
+        //         else if(code > 96 && code < 123) {
+        //             str += msg[i].toUpperCase();
+        //         }
+        //         else {
+        //             str += msg[i];
+        //         }
+        //     }
+        //     return str;
+        // }
+        // document.write(changeChars(msg));
+
+        // 4. *******************************************************************************
+
+        // let msg = 'font-size';
+        // function cssToCamelStyle(msg) {
+        //     let txt = msg.split('-');
+        //     let camel = txt[0];
+        //     let str = '';
+        //     for(let i = 1; i < txt.length; i++) {
+        //         let str_ = txt[i];
+        //         str += str_[0].toUpperCase();
+        //         str += str_.substring(1);
+        //     }
+        //     return (camel+str);
+        // }
+        // document.write(cssToCamelStyle(msg));
+
+        // 5. ***********************************************************************************
+
+        // let str = 'cascading style sheets';
+        // function getAbbreviation(str) {
+        //     let txt = str.split(' ');
+        //     let abb = '';
+        //     for(let i = 0; i < txt.length; i++) {
+        //         let str_ = txt[i];
+        //         abb += str_[0].toUpperCase();
+        //     }
+        //     return (abb);
+        // }
+        // document.write(str + ': ' + getAbbreviation(str));
+
+        // 6. **************************************************************************************
+
+        // function concatAllStrings() {
+        //     let str = '';
+        //     for(let i = 0; i < arguments.length; i++) {
+        //         str += arguments[i];
+        //     }
+        //     return str;
+        // }
+        // document.write(concatAllStrings('hello',',',' ','world','!'));
+
+        // 7. **************************************************************************************
+
+        // let str = '5 * 6';
+        // function calculator(str) {
+        //     let txt = str.split(' ');
+        //     let a = parseInt(txt[0]);
+        //     let b = parseInt(txt[2]);
+        //     let oper = txt[1];
+        //     switch(oper) {
+        //         case '+':{return a + b}break;
+        //         case '-':{return a - b}break;
+        //         case '*':{return a * b}break;
+        //         case '/':{return a / b}break;
+        //     }
+        // }
+        // document.write(calculator(str));
+
+        // 8. ***********************************************************************************
+
+        // let str = 'https://itstep.org/ua/about';
+        // function splitUrl(str) {
+        //     let str1 = str;
+        //     let txt1 = str1.split(':')
+        //     let prot = txt1[0];
+        //     let txt2 = txt1[1].substring(2);
+        //     let txt3 = txt2.split('/');
+        //     let dom = txt3[0];
+        //     let puth = str.substring(prot.length + dom.length + 3);
+        //     return `protocol: ${prot}, domen: ${dom}, puth: ${puth}`;
+        // }
+        // document.write(splitUrl(str));
+
+        // 9. **************************************************************************************
+
+        // let str = '2019:07:12:qq';
+        // let separ = ':';
+        // function separatorWithoutSplit(str, separ) {
+        //     let txt = [];
+        //     let i = 0;
+        //     while(true){
+        //         i = str.indexOf(separ);
+        //         if(i == -1) {
+        //             txt.push(str)
+        //             break;
+        //         }
+        //         let msg = str.substring(0, i);
+        //         str = str.replace(msg + separ, '');
+        //         txt.push(msg);  
+        //     }
+        //     return txt;
+        // }
+        // document.write(separatorWithoutSplit(str,separ));
+
+        // 10.  *****************************************************************************************
+        // let str = 'Today is %1 %2.%3.%4'
+        // function print(str, ...args) {
+        //     str = str.replace('%1', arguments[1]);
+        //     str = str.replace('%2', arguments[2]);
+        //     str = str.replace('%3', arguments[3]);
+        //     str = str.replace( '%4', arguments[4]);
+        //     return str;
+        // }
+        // document.write(print(str, 'Monday', 10, 8, 2020));
+    </script>
+</body>
+</html>
